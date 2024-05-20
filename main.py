@@ -1,13 +1,12 @@
 import pygame
 import sys
+import settings
 
 
 pygame.display.set_caption("Space Invadors")
 pygame.display.set_icon(pygame.image.load("resources/icon.png"))
-width = 1425
-height = 750
-screen = pygame.display.set_mode((width, height))
-surface = pygame.Surface((width, height))
+screen = pygame.display.set_mode((settings.width, settings.height))
+surface = pygame.Surface((settings.width, settings.height))
 
 
 while True:
@@ -15,3 +14,6 @@ while True:
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
+
+    screen.blit(surface, (0, 0))
+    pygame.display.flip()
