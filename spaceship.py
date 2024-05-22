@@ -1,11 +1,10 @@
 import pygame
+import settings
 
 
 class Spaceship:
-    def __init__(self, img_path, x, y):
-        self.img_path = img_path
-        self.x = x
-        self.y = y
+    def __init__(self, surface):
+        self.surface = surface
 
-    #def draw(self):
-        #pygame.
+    def draw(self):
+        surface.blit(settings.SpaceShipImg, (settings.SpaceShipStartX, settings.SpaceShipStartY))
