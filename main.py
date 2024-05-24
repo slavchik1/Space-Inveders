@@ -48,6 +48,12 @@ while True:
         i.draw()
         if i.shot():
             bullets.append(Bullet(surface, i.x, i.y, "ufo"))
-        # for i in ra
+        # for j in bullets:
+        #     if i.isColided(j.x, j.y):
+        #         bullets.remove(j)
+        #         ufos.remove(i)
+
+    if ufos[0].isColided(pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[0]):
+        print("a")
 
     Clock.tick(settings.fps)
