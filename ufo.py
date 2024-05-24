@@ -16,5 +16,5 @@ class Ufo:
             return True
 
     def isColided(self, x, y):
-        if x >= self.x and x <= self.x + settings.UfoWidth and y >= self.y and y <= self.y + settings.UfoWidth:
+        if x >= self.x and x <= self.x + settings.UfoWidth and y >= self.y and y <= self.y + settings.UfoHeight:
             return True

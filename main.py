@@ -54,6 +54,6 @@ while True:
         #         ufos.remove(i)
 
     if ufos[0].isColided(pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[0]):
-        print("a")
+        print("a---a")
 
     Clock.tick(settings.fps)
