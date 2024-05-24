@@ -15,3 +15,6 @@ class Ufo:
         if randint(1, settings.UfoShotChancePerFrame) == 1:
             return True
 
+    def isColided(self, x, y):
+        if x >= self.x and x <= self.x + settings.UfoWidth and y >= self.x and y <= self.y + settings.UfoWidth:
+            return True

@@ -48,5 +48,6 @@ while True:
         i.draw()
         if i.shot():
             bullets.append(Bullet(surface, i.x, i.y, "ufo"))
+        # for i in ra
 
     Clock.tick(settings.fps)
