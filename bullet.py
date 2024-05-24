@@ -7,6 +7,7 @@ class Bullet():
         self.surface = surface
         self.x = x
         self.y = y
+        self.belonging = belonging
         if belonging == "spaceship":
             self.a = -1
         elif belonging == "ufo":

@@ -15,6 +15,8 @@ Clock = pygame.time.Clock()
 
 bullets = []
 ufos = []
+del_bullet_index = None
+del_ufo_index = None
 
 for i in range(10):
     ufos.append(Ufo(surface, i * 100 + 50, 100))
@@ -48,12 +50,15 @@ while True:
         i.draw()
         if i.shot():
             bullets.append(Bullet(surface, i.x, i.y, "ufo"))
-        # for j in bullets:
-        #     if i.isColided(j.x, j.y):
-        #         bullets.remove(j)
-        #         ufos.remove(i)
 
-    if ufos[0].isColided(pygame.mouse.get_pos()[0], pygame.mouse.get_pos()[0]):
-        print("a---a")
+    def function():
+        for i in range(len(ufos)):
+            for j in range(len(bullets)):
+                if bullets[j].belonging == "spaceship" and ufos[i].isColided(bullets[j].x, bullets[j].y):
+                    return (i, j)
+
+
+
+
 
     Clock.tick(settings.fps)
