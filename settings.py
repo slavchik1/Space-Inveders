@@ -16,4 +16,6 @@ BulletHeight = 30
 UfoWidth = 74
 UfoHeight = 74
 UfoImg = pygame.image.load("resources/ufo.png")
-UfoShotChancePerFrame = 10 * 60 - 1
+UfoShotChancePerFrame = 120
+UfoSpeedInX = 2
+UfoSpeedInY = 4
